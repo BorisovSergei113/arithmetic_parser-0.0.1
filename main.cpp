@@ -1,69 +1,75 @@
 #include <iostream>
+using namespace std;
 
-
-int main() {
-    int a = 0 ;
-    int b = 0 ;
-    int c = 0 ;
-    char operation  ;
-    std::cin >> a >> operation >> b ;
-
-
-
-
-
-    switch(operation) {
-        case '+':
-            c = a + b;
-            std::cout << " a + b = " << c << '\n';
-            break;
-
-        case '-':
-            c = a - b;
-            std::cout << " a - b = " << c << '\n';
-            break;
-
-        case '*' :
-            c = a * b;
-            std::cout << " a * b = " << c << '\n';
-            break;
-
-        case '/' :
-            std::cout << " a / b = " << (double)a/b << '\n';
-            break;
-
-        case '%' :
-            c = a % b;
-            std::cout << " a % b = " << c << '\n';
-            break;
-
-        case '&' :
-            c = a & b;
-            std::cout << " a & b = " << c << '\n';
-            break;
-
-        case '|' :
-            c = a | b;
-            std::cout << " a | b = " << c << '\n';
-            break;
-
-        case '^':
-            c = a ^ b;
-            std::cout << " a^b = " << c << '\n';
-            break;
-
-        case '<' :
-            c = a << b;
-            std::cout << " a << b = " << c << '\n';
-            break;
-
-        case '>' :
-            c = a >> b;
-            std::cout << " a >> b = " << c << '\n';
-            break;
-
+int main()
+{
+    int a;
+    int b;
+    
+    char op1;
+    char op2;
+    
+    cin>> a >> op1;
+    
+    if ((op1=='<')||(op1=='>'))
+    {
+        cin>>op2>>b;
+        
     }
+    
+    else
+    {
+        cin>>b;
+    }
+    
+    if (op1=='+')
+    {
+        cout <<"a+b = "<< a+b<< '\n' ;
+    }
+    else if (op1=='-')
+    {
+        cout<< "a-b = "<< a-b<< '\n';
+    }
+    else if (op1=='*')
+        {
+        cout<<"a*b = "<< a*b<< '\n';
+}
+else if (op1=='/')
+{
+    cout << "a/b = "<<(double)a/b<< '\n';
+}
 
-
-    return 0;
+else if (op1=='%')
+{
+    cout << "a%b = "<< a%b<< '\n';
+}
+else if (op1=='&')
+{
+    cout <<"a&b = " << (a & b)<< '\n';
+}
+else if (op1=='|')
+{
+    cout << "a|b = " <<( a|b)<< '\n';
+}
+else if (op1=='^')
+{
+    cout << "aˆb = "<< (a^b)<< '\n';
+}
+else if ((op1=='<')&&(op2=='<'))
+{
+    cout << "a<<b = "<<(a<<b)<< '\n';
+}
+else if ((op1=='>')&&(op2=='>'))
+{
+    cout << "a>>b = "<<(a>>b)<< '\n';
+}
+else
+{
+    return 0 ;
+    
+}
+    
+cin.get();
+    
+return 0;
 }
